@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   async function handleAddRepository() {
-    const response = api.post('repositories', {
+    const response = await api.post('repositories', {
       title: `Novo Repositório ${Date.now()}`,
       url: 'http://github.com/NovoRepositório',
       techs: ["Node.js", "ReactJS"]
